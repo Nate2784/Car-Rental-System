@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <stdlib.h>
-
+#include <limits>
 using namespace std;
 int login();
 string getName();
@@ -103,8 +103,7 @@ void Menu ()
 
   for(int i=0 ;i<size;++i)
 {
-    cout<<"\t\t\t";
-    cout<<"Enter "<<num<<"\t- To Select  "<<car.company[i]<<endl;
+    cout<<"\tEnter "<<num<<" - To Select  "<<car.company[i]<<endl;
     num++ ;
 }
 
@@ -114,100 +113,100 @@ void Details (int Choice, string uName)
   {
    system("CLS");
    
-	 cout<<"\t\t\t\t----------------------------------------------\n";
-     cout<<"\t\t\t\tNDY CAR RENTAL SYSTEM \n";
-     cout<<"\t\t\t\tMr/Mrs "<<uName<<", Please Choose a car To rent from the menu : "<<endl;
-     cout<<"\t\t\t\t----------------------------------------------\n";
+	 cout<<"\t----------------------------------------------\n";
+     cout<<"\tNDY CAR RENTAL SYSTEM \n";
+     cout<<"\tMr/Mrs "<<uName<<", Please Choose a car To rent from the menu : "<<endl;
+     cout<<"\t----------------------------------------------\n";
    switch (Choice){
    	case 1:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << MarutiSuzuki.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << MarutiSuzuki.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << MarutiSuzuki.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << MarutiSuzuki.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << MarutiSuzuki.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<MarutiSuzuki.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << MarutiSuzuki.cars[i].model <<endl;
+        cout << "\tColor: " << MarutiSuzuki.cars[i].color <<endl;
+        cout << "\tMax Speed: " << MarutiSuzuki.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << MarutiSuzuki.cars[i].price <<endl;
+        cout << "\tDate: " << MarutiSuzuki.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<MarutiSuzuki.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
    	case 2:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << Volkswagun.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << Volkswagun.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << Volkswagun.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << Volkswagun.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << Volkswagun.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<Volkswagun.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << Volkswagun.cars[i].model <<endl;
+        cout << "\tColor: " << Volkswagun.cars[i].color <<endl;
+        cout << "\tMax Speed: " << Volkswagun.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << Volkswagun.cars[i].price <<endl;
+        cout << "\tDate: " << Volkswagun.cars[i].date <<endl;
+        cout << "-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<Volkswagun.cars[i].model<<endl;
+        cout << "-------------------------\n" <<endl;
     }
    		break;
    	case 3:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << BMW.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << BMW.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << BMW.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << BMW.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << BMW.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<BMW.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << BMW.cars[i].model <<endl;
+        cout << "\tColor: " << BMW.cars[i].color <<endl;
+        cout << "\tMax Speed: " << BMW.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << BMW.cars[i].price <<endl;
+        cout << "\tDate: " << BMW.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<BMW.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
    	case 4:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << Audi.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << Audi.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << Audi.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << Audi.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << Audi.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<Audi.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << Audi.cars[i].model <<endl;
+        cout << "\tColor: " << Audi.cars[i].color <<endl;
+        cout << "\tMax Speed: " << Audi.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << Audi.cars[i].price <<endl;
+        cout << "\tDate: " << Audi.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<Audi.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
    	case 5:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << KIA.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << KIA.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << KIA.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << KIA.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << KIA.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<KIA.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << KIA.cars[i].model <<endl;
+        cout << "\tColor: " << KIA.cars[i].color <<endl;
+        cout << "\tMax Speed: " << KIA.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << KIA.cars[i].price <<endl;
+        cout << "\tDate: " << KIA.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<KIA.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
    	case 6:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << Tesla.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << Tesla.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << Tesla.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << Tesla.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << Tesla.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<Tesla.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << Tesla.cars[i].model <<endl;
+        cout << "\tColor: " << Tesla.cars[i].color <<endl;
+        cout << "\tMax Speed: " << Tesla.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << Tesla.cars[i].price <<endl;
+        cout << "\tDate: " << Tesla.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<Tesla.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
    	case 7:
 	   for(int i = 0; i < 5; i++) {
-        cout << "\t\t\t\tCar " << i+1 << " Info:" <<endl;
-        cout << "\t\t\t\tModel: " << Mercedes.cars[i].model <<endl;
-        cout << "\t\t\t\tColor: " << Mercedes.cars[i].color <<endl;
-        cout << "\t\t\t\tMax Speed: " << Mercedes.cars[i].max_speed <<endl;
-        cout << "\t\t\t\tPrice: " << Mercedes.cars[i].price <<endl;
-        cout << "\t\t\t\tDate: " << Mercedes.cars[i].date <<endl;
-        cout << "\t\t\t\t-------------------------" <<endl;
-        cout<<"\t\t\t\tEnter "<<i+1<<"\t- To Select  "<<Mercedes.cars[i].model<<endl;
-        cout << "\t\t\t\t-------------------------\n" <<endl;
+        cout << "\tCar " << i+1 << " Info:" <<endl;
+        cout << "\tModel: " << Mercedes.cars[i].model <<endl;
+        cout << "\tColor: " << Mercedes.cars[i].color <<endl;
+        cout << "\tMax Speed: " << Mercedes.cars[i].max_speed <<endl;
+        cout << "\tPrice: " << Mercedes.cars[i].price <<endl;
+        cout << "\tDate: " << Mercedes.cars[i].date <<endl;
+        cout << "\t-------------------------" <<endl;
+        cout<<"\tEnter "<<i+1<<" - To Select  "<<Mercedes.cars[i].model<<endl;
+        cout << "\t-------------------------\n" <<endl;
     }
    		break;
 	default:
@@ -222,74 +221,74 @@ void chosenCar(int theChoice,int carChoice){
 	switch (theChoice){
   		
 	   	case 1:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << MarutiSuzuki.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << MarutiSuzuki.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << MarutiSuzuki.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << MarutiSuzuki.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << MarutiSuzuki.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << MarutiSuzuki.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << MarutiSuzuki.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << MarutiSuzuki.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << MarutiSuzuki.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << MarutiSuzuki.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 2:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << Volkswagun.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << Volkswagun.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << Volkswagun.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << Volkswagun.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << Volkswagun.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << Volkswagun.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << Volkswagun.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << Volkswagun.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << Volkswagun.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << Volkswagun.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 3:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << BMW.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << BMW.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << BMW.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << BMW.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << BMW.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << BMW.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << BMW.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << BMW.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << BMW.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << BMW.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 4:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << Audi.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << Audi.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << Audi.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << Audi.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << Audi.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << Audi.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << Audi.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << Audi.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << Audi.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << Audi.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 5:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << KIA.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << KIA.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << KIA.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << KIA.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << KIA.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\ttModel: " << KIA.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << KIA.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << KIA.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << KIA.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << KIA.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 6:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << Tesla.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << Tesla.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << Tesla.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << Tesla.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << Tesla.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << Tesla.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << Tesla.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << Tesla.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << Tesla.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << Tesla.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 	   	case 7:
-	        cout << "\t\t\t\t----------------------------" <<endl;
-		    cout << "\t\t\t\tYou have chosen: Car " << carChoice+1 << "\n\t\t\t\tInfo:" <<endl;
-	        cout << "\t\t\t\tModel: " << Mercedes.cars[carChoice].model <<endl;
-	        cout << "\t\t\t\tColor: " << Mercedes.cars[carChoice].color <<endl;
-	        cout << "\t\t\t\tMax Speed: " << Mercedes.cars[carChoice].max_speed <<endl;
-	        cout << "\t\t\t\tPrice: " << Mercedes.cars[carChoice].price <<endl;
-	        cout << "\t\t\t\tDate: " << Mercedes.cars[carChoice].date <<endl;
-	        cout << "\t\t\t\t----------------------------" <<endl;
+	        cout << "\t----------------------------" <<endl;
+		    cout << "\tYou have chosen: Car " << carChoice+1 << "\n\tInfo:" <<endl;
+	        cout << "\tModel: " << Mercedes.cars[carChoice].model <<endl;
+	        cout << "\tColor: " << Mercedes.cars[carChoice].color <<endl;
+	        cout << "\tMax Speed: " << Mercedes.cars[carChoice].max_speed <<endl;
+	        cout << "\tPrice: " << Mercedes.cars[carChoice].price <<endl;
+	        cout << "\tDate: " << Mercedes.cars[carChoice].date <<endl;
+	        cout << "\t----------------------------" <<endl;
 	   		break;
 		default:
 			break;
@@ -304,51 +303,49 @@ void checklease (int theChoice, int k )
   		
 	   	case 1:
 		    if(lease.payment_acc[k]>=MarutiSuzuki.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \nReason: Broke "<<endl;
 	   		break;
 	   	case 2:
 		    if(lease.payment_acc[k]>=Volkswagun.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \nReason: Broke "<<endl;
 	   		break;
 	   	case 3:
 		    if(lease.payment_acc[k]>=BMW.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \nReason: Broke "<<endl;
 	   		break;
 	   	case 4:
 		    if(lease.payment_acc[k]>=Audi.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \nReason: Broke "<<endl;
 	   		break;
 	   	case 5:
 		    if(lease.payment_acc[k]>=KIA.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
 	   		break;
 	   	case 6:
 		    if(lease.payment_acc[k]>=Tesla.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\nNot Available \n\n\n\t\t\tReason: Broke "<<endl;
 	   		break;
 	   	case 7:
 		    if(lease.payment_acc[k]>=Mercedes.cars[k].price)
-	           cout<<"\n\n\n\t\t\tProcess has been done successfully!! "<<endl;
+	           cout<<"\n\tProcess has been done successfully!! "<<endl;
 	           else
-	              cout<<"\n\n\n\t\t\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
+	              cout<<"\n\tNot Available \n\n\n\t\t\tReason: Broke "<<endl;
 	   		break;
 		default:
 			break;
 	  }
-      
-
   }
 
   void user_input (int theChoice, int carChoice, string uName)
@@ -356,14 +353,14 @@ void checklease (int theChoice, int k )
    system("CLS");
    int i;
         int j=carChoice-1 ;
-       cout<<"\t\t\t----------------------------------------\n";
-       cout<<"\t\t\tPlease Provide Your Personal Details  : \n";
-       cout<<"\t\t\t----------------------------------------\n\n";
-       cout<<"\n\tNOTE: \n\tPAYMENT WON'T PROCEED IF THE GIVEN ACCOUNT HAS LESS BALANCE THN THE RATE OF CAR\n\n\n\n";
-       cout<<"\t\t\t Your Name : "<<uName;
-       cout<<"\n\t\t\tEnter Your National ID : ";
+       cout<<"\t----------------------------------------\n";
+       cout<<"\tPlease Provide Your Personal Details  : \n";
+       cout<<"\t----------------------------------------\n\n";
+       cout<<"\n\tNOTE: \n\tPAYMENT WON'T PROCEED IF THE GIVEN ACCOUNT HAS LESS BALANCE THN THE RATE OF CAR\n";
+       cout<<"\tYour Name : "<<uName;
+       cout<<"\n\tEnter Your National ID : ";
        cin>>lease.Natio_ID[j] ;
-       cout<<"\t\t\tPayment Accouunt Balance: " ;
+       cout<<"\n\tPayment Accouunt Balance: " ;
        cin>>lease.payment_acc[j] ;
 
 
@@ -379,37 +376,43 @@ int main(){
 	
 	string decide ="yes" ;
 details:
-     cout<<"\t\t\t----------------------------------------------\n";
-     cout<<"\t\t\tNDY CAR RENTAL SYSTEM \n";
-     cout<<"\t\t\tHello "<<UName<<" Welcome to Our Company, \n\t\t\t Please Choose a car company from the menu : "<<endl;
-     cout<<"\t\t\t----------------------------------------------\n";
+     cout<<"\t----------------------------------------------\n";
+     cout<<"\tNDY CAR RENTAL SYSTEM \n";
+     cout<<"\tHello "<<UName<<" Welcome to Our Company, \n\t Please Choose a car company from the menu : "<<endl;
+     cout<<"\t----------------------------------------------\n";
      
      while(decide!="exit")
      {
 Company:
          Menu();
-     cout<<"\n\n\n\t\t\tYour Choice: ";
+     cout<<"\n\tYour Choice: ";
      int theChoice ;
      cin>>theChoice ;
 	     if(theChoice!= 1 && theChoice!= 2 && theChoice!= 3 && theChoice!= 4 && theChoice!= 5 && theChoice!= 6 && theChoice!= 7 ) {
-	     	
+	     	cin.clear();
+	     	cin.ignore(numeric_limits<streamsize>::max(),'\n');
 	        	system("CLS");
+	        	cout<<"\tPlease enter an appropriate choice from '1 to 7', thanks! :)";
+	        	system("PAUSE");
 	        goto Company;	
 		 }
 carChoice:     
      Details(theChoice,UName);
 	 int carChoice ;
-     cout<<"\n\n\n\t\t\tSelect A Car you Want To Rent: ";
+     cout<<"\n\tSelect A Car you Want To Rent: ";
      cin>>carChoice ;
 	     if(carChoice!= 1 && carChoice!=2 && carChoice!= 3 && carChoice!= 4 && carChoice!= 5) {
-	     	
+	     	cin.clear();
+	     	cin.ignore(numeric_limits<streamsize>::max(),'\n');
 	        	system("CLS");
+	        	cout<<"\tPlease enter an appropriate choice from '1 to 5', thanks! :)";
+	        	system("PAUSE");
 	        goto carChoice;	
 		 }
 prev:
 	decide ="yes" ;
      chosenCar(theChoice,carChoice);
-     cout<<"\n\n\n\t\t\tAre You Sure, you want to rent this Car? (yes = y /no = n /exit ) : ";
+     cout<<"\n\n\tAre You Sure, you want to rent this Car? (yes = y /no = n /exit ) : ";
      cin>>decide ;
 	     if(decide!="y"&& decide!="n"&& decide!="exit") {
 	     	
@@ -418,14 +421,14 @@ prev:
 		 }
      if(decide=="y") {
         user_input(theChoice,carChoice, UName);
-        cout<<"\n\n\t\t\tDo you want to continue ?(y/n) ";
+        cout<<"\n\tDo you want to rent another car ?(y/n) ";
         cin>>decide;
         if (decide =="y") {
         	system("CLS");
         goto details;	
 		}
-        if (decide=="n") break ;
-system("CLS");
+        if (decide=="n") system("CLS"); break ;
+     
      }
 
    else {
@@ -444,7 +447,7 @@ system("CLS");
    }
      }
 
-    cout<< "\t\t\t\t Thank you for using our system :)\n \t\t\t\tHave a Great day!";
+    cout<< "\tThank you for using our system :)\n\t Have a Great day!\n\n\n\n";
 
 	return 0;
 }
@@ -452,21 +455,23 @@ system("CLS");
 int login(){
 	string pass ="";
    char ch;
-   cout <<"\n\n\n\n\n\n\n\t\t\t\t  NDY Car Rental System Login";
-   cout <<"\n\n\n\n\n\n\n\t\t\t\t\tEnter Password: ";
+   cout <<"\tNDY Car Rental System Login";
+   cout <<"\n\n\n\tEnter Password: ";
    ch = _getch();
-   while(ch != 13){//char 13 is enter
+   while(ch != 13){
       pass.push_back(ch);
       cout<<'*';
       ch = _getch();
    }
    if(pass == "12345"){
-      cout <<"\n\n\n\n\t\t\t\t  Access Granted! Welcome To Our System \n\n";
+   	  system("CLS");
+      cout <<"\n\t Access Granted! Welcome To Our System \n";
       system("PAUSE");
       system("CLS");
 
    }else{
-      cout <<"\n\n\n\n\t\t\tAccess Denied...Please Try Again!!\n";
+      system("CLS");
+      cout <<"\n\tAccess Denied...Please Try Again!!\n";
       system("PAUSE");
       system("CLS");
       login();
@@ -475,12 +480,12 @@ int login(){
 
 string getName(){
 	string uName;
-    cout <<"\n\n\n\n\n\n\n\t\t\t\t\tPlease enter your First Name: ";
+    cout <<"\n\tPlease enter your First Name: ";
     cin>>uName;
     
     system("CLS");
     
-    cout <<"\n\n\n\n\n\n\n\t\t\tWelcome To NDY Car Rentals  Mr/Mrs: "<<uName<<" :)\n\n\n";
+    cout <<"\n\tWelcome To NDY Car Rentals  Mr/Mrs: "<<uName<<" :)\n\n\n\n";
     system("PAUSE");
     system("CLS");
     return uName;
